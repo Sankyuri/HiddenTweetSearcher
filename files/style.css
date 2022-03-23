@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+/* 修正願います */
+body {
+    background-color: #f0f0f0ff;
+    color: #000f
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #333f;
+        color: #ffff; 
+    }
+}
+
+
+

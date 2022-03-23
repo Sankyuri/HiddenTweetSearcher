@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Hidden Tweet Searcher</title>
-    <style type="text/css">
-        /* 修正願います */
-        body {
-            background-color: #f0f0f0ff;
-            color: #000f
-        }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: #333f;
-                color: #ffff; 
-            }
-        }
-    </style>
+
+    <!---- Changes by Sankyuri
+        style and script was splitted to new files.
+    ---->
+    <!-- The style was move to files\\style.css -->
+    <link rel="stylesheet" href="files/style.css">
+    <script src="files/script.js"></script>
+    <!-- END of Changes by Sankyuri -->
+
     <meta property="og:title" content="Hidden Tweet Searcher">
     <meta property="og:description" content="ログインせずにユーザーのツイートを覗く">
     <meta property="og:site_name" content="Hidden Tweet Searcher">
@@ -50,29 +46,9 @@
         <button type="button" onclick="search();">表示</button>
     </div>
 
-    <script>
-        function search() {
-            var AccountID = document.getElementById("inputBox").value;
-            let TwitterTimeline = document.getElementById("twitter-timeline");
-            //aタグを取得
-            
-            var Language = document.getElementById('lang').value;
-            // 言語を取得
-
-            var MakeLink = "https://twitter.com/" + AccountID + "?lang=" + Language;
-            //入力でリンクを作成
-
-            TwitterTimeline.setAttribute("href", MakeLink);
-            console.log("Link: " + MakeLink);
-            //作成したリンクでhref属性の値を更新
-
-            var script = document.createElement("script");
-            script.src = "https://platform.twitter.com/widgets.js";
-            document.body.appendChild(script);
-            //Twitter社提供のJavaScriptコードの読み込み
-            //コードを読み込む前にhref属性を書き換えなければならない
-        }
-    </script>
+    <!---- Changes by Sankyuri ---->
+    <!-- The script was move to files\\script.js -->
+    <!-- END of Changes by Sankyuri -->
 
     <a class="twitter-timeline" data-lang="ja" data-width="400" href="#" id="twitter-timeline"></a>
     <br><br>
